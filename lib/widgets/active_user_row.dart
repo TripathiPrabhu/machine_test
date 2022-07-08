@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:machine_test/utils/active_user_card.dart';
+import '../helpers/active_user_card.dart';
 
 class ActiveUserRow extends StatelessWidget {
   const ActiveUserRow({Key? key}) : super(key: key);

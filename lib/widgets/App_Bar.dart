@@ -17,8 +17,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: CircleAvatar(
+
                             radius: 30.0,
-                            backgroundImage: AssetImage('images/image 193.png'),
+                            backgroundImage: AssetImage(
+                                'images/image 193.png'),
+                backgroundColor: Colors.transparent,
                           ),
             ),
           ),
@@ -42,12 +45,15 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 25, right: 10.0,left: 10.0),
-            child: Icon(Icons.notifications_outlined, size: 40.0,),
+            child: IconButton( onPressed: () {print('notification button pressed');  }, icon: Icon(Icons.notifications_outlined, size: 40.0,),
           ),
+    ),
           Padding(
-            padding: const EdgeInsets.only(top: 25, right: 5.0),
-            child: Icon(Icons.wechat_outlined, size: 40.0,),
+            padding:  EdgeInsets.only(top: 25, right: 10.0),
+            child: IconButton(icon: Icon(Icons.wechat_outlined, size: 40.0,),
+    onPressed: (){print('chat button pressed');},
           ),
+          )
         ],
 
         ),

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Timer extends StatefulWidget {
-  const Timer({Key? key}) : super(key: key);
+class CountTimer extends StatefulWidget {
+  const CountTimer({Key? key}) : super(key: key);
 
   @override
-  State<Timer> createState() => _TimerState();
+  State<CountTimer> createState() => _CountTimerState();
 }
 
-class _TimerState extends State<Timer> {
+class _CountTimerState extends State<CountTimer> {
   @override
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.only(left: 12, top: 25, right: 12),
     child: Container(
-    height: 200,
+    height: 230,
     width: MediaQuery.of(context).size.width,
     // color: Colors.green,
     child: Card(
@@ -50,24 +50,26 @@ class _TimerState extends State<Timer> {
             fontWeight: FontWeight.w400),
       ),
       Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.only(left: 12, right: 12, bottom: 12, top: 50),
         child: SizedBox(
-          height: 45,
+          height: 50,
           width: MediaQuery.of(context).size.width,
           child: ElevatedButton(onPressed: () {  },
             style: ElevatedButton.styleFrom(
-              primary: Colors.white,
-
+            primary: Colors.white,
+            onPrimary: Colors.lime,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
             ),
+          ),
             child: Text('View More Profile cards',
               style: TextStyle(
                   color: Colors.teal,
                   fontSize: 20,
                   fontWeight: FontWeight.bold
               ),),
-
-          ),
         ),
+      ),
       ),
       ]
     ),
